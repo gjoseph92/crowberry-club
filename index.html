@@ -17,17 +17,45 @@
                 --background: #2c2720;
                 --color: #c9d1d9;
             }
+
+            a {
+                color: #58a6ff;
+            }
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: min-content 1fr min-content;
+            gap: 0px 0px;
+            grid-template-areas:
+                "header"
+                "main"
+                "footer";
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        .content {
+            grid-area: main;
+        }
+
+        footer {
+            grid-area: footer;
         }
 
         header,
         footer {
             text-align: center;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
 
         h1 {
@@ -44,18 +72,20 @@
         </p>
         <hr>
     </header>
-    <section>
-        <h2 id="crowberries">Give Crowberries A Chance!</h2>
-        <img src="give-crowberries-a-chance.png" alt="Give Crowberries A Chance!" height="250px">
-    </section>
-    <section>
-        <h2 id="zesty">Keep Life Zesty!</h2>
-        <img src="keep-life-zesty.png" alt="Keep Life Zesty!" height="250px">
-    </section>
+    <div class="content">
+        <section>
+            <h2 id="crowberries">Give Crowberries A Chance!</h2>
+            <img src="give-crowberries-a-chance.png" alt="Give Crowberries A Chance!" height="250px">
+        </section>
+        <section>
+            <h2 id="zesty">Keep Life Zesty!</h2>
+            <img src="keep-life-zesty.png" alt="Keep Life Zesty!" height="250px">
+        </section>
+    </div>
     <footer>
         <hr>
         <p>
-            <em>Optimized for Netscape Navigator</em>
+            <em>© 2022 • Optimized for Netscape Navigator</em>
             <img src="netscape.webp" alt="Netscape Navigator logo with meteors passing in the background" height="30px"
                 style="display: inline; height: 1.3em; vertical-align: middle;">
         </p>
